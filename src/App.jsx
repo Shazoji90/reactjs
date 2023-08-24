@@ -1,12 +1,10 @@
 import "./App.css";
-import Article from "./components/Article";
+import Home from "./pages";
 
 function App() {
   return (
     <>
-      <Article name="Firman" titles={["Reactjs", "Nextjs", "Nodejs"]} />
-      <br />
-      <Article name="Sasongko" titles={["Vuejs", "Nuxtjs", "Deno"]} />
+      <Home />
     </>
   );
 }
