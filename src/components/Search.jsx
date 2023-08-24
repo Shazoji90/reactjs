@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-function Search() {
+function Search(props) {
   const [search, setSearch] = useState("");
 
   const changeSearch = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setSearch(event.target.value);
+    props.onSearchChange(event.target.value);
   };
 
   return (
