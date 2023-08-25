@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Search(props) {
   const [search, setSearch] = useState("");
@@ -20,20 +20,6 @@ function Search(props) {
       changeSearch();
     }
   };
-
-  // React versi lama menggunakan 3 lifecycle
-  // componentDidMount -> komponen yg dijalankan ketika halaman pertamakali di-render
-  // componentDidUpdate -> ketika state berubah
-  // componentWillUnmount -> ketika komponen akan dibuang/ditutup
-
-  useEffect(() => {
-    // console.log("render");  -> akan muncul 2 kata render di console
-    // karena pada file main.jsx ada StrictMode yg nantinya tidak dipakai dalam production
-    console.log("render");
-  }, []);
-  {
-    /* -> array [] kosong untuk menghentikan render */
-  }
 
   return (
     <>
