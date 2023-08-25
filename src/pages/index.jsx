@@ -23,6 +23,16 @@ function Homepage() {
       .then((json) => setExternalPosts(json));
   }, []);
 
+  // gunakan multiple useEffect jika tidak ingin melakukan fetching API di atas
+  useEffect(() => {
+    console.log("ada post baru");
+  }, [posts]);
+
+  // gunakan jika butuh tiap kali ada perubahan/rendering
+  useEffect(() => {
+    console.log("render terus");
+  });
+
   return (
     <>
       <h1>Simple Blog</h1>
