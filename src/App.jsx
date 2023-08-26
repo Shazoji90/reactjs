@@ -1,6 +1,8 @@
 import "./App.css";
 import Home from "./pages";
 import { GlobalContext } from "./context";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routers";
 
 function App() {
   const user = {
@@ -9,7 +11,9 @@ function App() {
   return (
     <>
       <GlobalContext.Provider value={user}>
-        <Home />
+        {/* <Home /> -> Home dihapus karena sudah dipindahkan kedalam router */}
+        {/* FYI: semua component yg berada dalam RouterProvider akan dihandle oleh React Router */}
+        <RouterProvider router={router} />
       </GlobalContext.Provider>
     </>
   );
